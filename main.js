@@ -10,10 +10,12 @@ var request = function(options) {
 
   if(isPost && data) {
     data = data+'\n';
-    options.headers = {
-          'Content-Type': options.contentType || 'application/x-www-form-urlencoded',
-          'Content-Length': data.length
-      }
+    if(!options.headers) {
+      options.headers  = {};
+    }
+
+    options.headers['Content-Type'] = options.contentType || 'application/x-www-form-urlencoded';
+    options.headers['Content-Length'] = data.length;
   }
 
   if(!isPost && data) {
