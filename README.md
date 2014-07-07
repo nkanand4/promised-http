@@ -1,4 +1,4 @@
 promised-http
 =============
 
-Nodejs based http with Promise
+Nodejs based requests, http/https with Promise for easy handling.
