@@ -1,7 +1,7 @@
 var future = require("q");
 
 var request = function(options) {
-  var http = options.protocol === 'https' ? require('https') : require('http');
+  var http = /https/i.test(options.protocol) ? require('https') : require('http');
   var dfd = future.defer();
   var data = options.data ? options.data : undefined;
   var isPost = /post/i.test(options.method);
