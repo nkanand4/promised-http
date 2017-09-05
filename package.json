@@ -3,6 +3,7 @@
   "description": "Nodejs based requests, http/https with Promise for easy handling.",
   "version": "0.0.1",
   "author": "Nitesh Anand",
+  "main": "main.js",
   "dependencies": {
     "q": "1.0.1"
   },
